@@ -1,0 +1,27 @@
+---
+title: "Leaflet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Loading library and  creating date
+```{r}
+library(leaflet)
+
+a<-timestamp()
+b<-"Creadted at"
+c<-paste(b, a)
+c
+```
+  
+Making map using leaflet
+   
+```{r}
+map<- leaflet() %>% addTiles () %>% addMarkers( lat = 42.37033, lng = -71.09360,
+                                                popup = c)
+
+map
+```
